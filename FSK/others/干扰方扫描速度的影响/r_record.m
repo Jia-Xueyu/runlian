@@ -1,0 +1,12 @@
+function temp=r_record(N)
+temp=[];
+N=double(N);
+R=audiorecorder(44100,24,1);
+disp('Start speaking.')
+recordblocking(R,24);
+disp('End of Recording.');
+myspeech=getaudiodata(R);
+filename=['record',num2str(N),'.wav'];
+audiowrite(filename,myspeech,44100);
+end
+

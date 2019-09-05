@@ -1,0 +1,4 @@
+a = load('./information_original.txt')
+disp(a);
+b=load('./information.txt')
+disp
